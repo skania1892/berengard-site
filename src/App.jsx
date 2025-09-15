@@ -42,7 +42,7 @@ export default function App() {
           </div>
           <div className="relative">
             <div className="aspect-square w-full max-w-md mx-auto">
-              <RingLogo className="w-full h-full" />
+              <img src{Logo} alt="Berengard Logo" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
