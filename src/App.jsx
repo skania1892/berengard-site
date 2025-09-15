@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '/assets/Logo1_centered-update1';
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* Main logo */}
-            <RingLogo className="w-12 h-12" />
+            <img src={Logo} alt="Berengard Logo" className="w-12 h-12" />
             <div className="font-semibold tracking-wide text-slate-900 text-lg">Berengard Technologies LLC</div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
