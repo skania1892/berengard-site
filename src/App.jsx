@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './assets/Logo1_centered-update1';
+import Logo from './assets/Logo1_centered-update1.png';
 
 export default function App() {
   return (
