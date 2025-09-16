@@ -3,25 +3,3 @@
 @tailwind utilities;
 
 html, body, #root { height: 100%; }
-
-body {
-  @apply bg-no-repeat bg-cover bg-center;
-  background-image: url('/src/assets/background_image.png');
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: inherit;
-  background-size: inherit;
-  background-repeat: inherit;
-  background-position: inherit;
-  opacity: 0.07; /* adjust transparency */
-  z-index: 0; /* keeps it behind content */
-}
-
-#root {
-  position: relative;
-  z-index: 10;
-}
