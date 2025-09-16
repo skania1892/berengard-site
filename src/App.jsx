@@ -93,7 +93,7 @@ export default function App() {
             <div className="md:col-span-2">
               <h2 className="text-3xl font-bold text-slate-900">About Berengard</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Founded by Steven Kania, Berengard Technologies helps small and mid-size businesses adopt AI the practical way—
+                Founded by Steven Kania and registered through the State of Tennessee, Berengard Technologies helps small and mid-size businesses adopt AI the practical way—
                 focusing on concrete outcomes like faster support, leaner operations, and better forecasting. With deep experience in retail supply chain,
                 reporting, and machine learning, we translate AI into everyday wins your team can own.
               </p>
