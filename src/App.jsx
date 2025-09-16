@@ -120,19 +120,59 @@ export default function App() {
                 Or email: <a className="underline hover:text-white" href="mailto:hello@berengard.tech">hello@berengard.tech</a>
               </div>
             </div>
-            <form onSubmit={(e)=>e.preventDefault()} className="rounded-2xl bg-white text-slate-800 p-6 shadow-xl">
-              <div className="grid gap-4">
-                <Input label="Name" type="text" placeholder="Your name" />
-                <Input label="Email" type="email" placeholder="you@company.com" />
-                <Input label="Company" type="text" placeholder="Business name" />
-                <div>
-                  <label className="block text-sm font-medium text-slate-700">What’s your challenge?</label>
-                  <textarea className="mt-1 w-full rounded-xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-sky-500 min-h-[120px]" placeholder="Describe your needs…"/>
-                </div>
-                <button className="mt-2 rounded-xl bg-sky-800 px-4 py-3 text-white hover:bg-sky-700">Send (demo)</button>
-                <p className="text-xs text-slate-500">This is a demo form. Hook it up to your email, Airtable, or Zapier when you go live.</p>
-              </div>
-            </form>
+				<form
+				  name="contact"
+				  method="POST"
+				  data-netlify="true"
+				  netlify-honeypot="bot-field"
+				  action="/success.html"
+				  className="rounded-2xl bg-white text-slate-800 p-6 shadow-xl"
+				>
+				  {/* Netlify needs these hidden fields */}
+				  <input type="hidden" name="form-name" value="contact" />
+				  <p className="hidden">
+					<label>Don’t fill this out if you’re human:
+					  <input name="bot-field" />
+					</label>
+				  </p>
+
+				  <div className="grid gap-4">
+					<div>
+					  <label className="block text-sm font-medium text-slate-700">Name</label>
+					  <input name="name" type="text" placeholder="Your name"
+							 className="mt-1 w-full rounded-xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-sky-500" required/>
+					</div>
+
+					<div>
+					  <label className="block text-sm font-medium text-slate-700">Email</label>
+					  <input name="email" type="email" placeholder="you@company.com"
+							 className="mt-1 w-full rounded-xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-sky-500" required/>
+					</div>
+
+					<div>
+					  <label className="block text-sm font-medium text-slate-700">Company</label>
+					  <input name="company" type="text" placeholder="Business name"
+							 className="mt-1 w-full rounded-xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-sky-500"/>
+					</div>
+
+					<div>
+					  <label className="block text-sm font-medium text-slate-700">What’s your challenge?</label>
+					  <textarea name="message"
+						className="mt-1 w-full rounded-xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-sky-500 min-h-[120px]"
+						placeholder="Describe your needs…" required/>
+					</div>
+
+					{/* Optional: Netlify reCAPTCHA (enable in Netlify settings first) */}
+					{/* <div data-netlify-recaptcha="true"></div> */}
+
+					<button className="mt-2 rounded-xl bg-sky-800 px-4 py-3 text-white hover:bg-sky-700">
+					  Send
+					</button>
+					<p className="text-xs text-slate-500">
+					  By submitting, you agree we may contact you about your inquiry.
+					</p>
+				  </div>
+				</form>
           </div>
         </section>
 
