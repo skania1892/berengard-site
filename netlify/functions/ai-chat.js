@@ -1,6 +1,15 @@
 // netlify/functions/ai-chat.js
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-const FAQ = require("./faq.json");
+let FAQ = [];
+try {
+  FAQ = require("./faq.json");
+} catch (e) {
+  console.error("Failed to load faq.json:", e);
+  FAQ = [
+    { q: "What services do you offer?", a: "AI Readiness Audit; Customer Support Chatbot; Productivity Automations; Smart Marketing with AI; Forecasting & Analytics; Team Training & Policy; AI-Ready Website Starter." }
+  ];
+}
+
 
 // --- Moderation helper ---
 async function moderate(text) {
@@ -171,14 +180,16 @@ You are Arwen, the Berengard Assistant. Be professional, friendly, and concise.
       }),
     });
 
-    if (!resp.ok) {
-      const text = await resp.text();
-      console.error("OpenAI error:", resp.status, text);
-      return {
-        statusCode: 502,
-        body: JSON.stringify({ error: "Upstream AI error" }),
-      };
-    }
+	if (!resp.ok) {
+	  const text = await resp.text();
+	  console.error("OpenAI error:", resp.status, text);
+	  return {
+		statusCode: 200,
+		body: JSON.stringify({
+		  reply: "I couldn’t generate a response just now. Here’s a quick overview of our services: AI Readiness Audit, Customer Support Chatbot, Productivity Automations, Smart Marketing with AI, Forecasting & Analytics, Team Training & Policy, and AI-Ready Website Starter. You can also reach us at hello@berengard.tech."
+		})
+	  };
+	}
 
     const data = await resp.json();
     const reply =
