@@ -22,7 +22,7 @@ export async function handler(event) {
       messages: [
         {
           role: "system",
-          content: "You are Elan, the Berengard Assistant. Be professional, friendly, and concise.",
+          content: "You are Arwen, the Berengard Assistant. Be professional, friendly, and concise.",
         },
         { role: "user", content: message },
       ],
