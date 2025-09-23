@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './assets/logo_transparent.png';
-import ChatWidget from "./components/ChatWidget";
+import ChatWidget from "./components/ChatWidget"; // ✅ Elan import
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
         style={{ backgroundImage: "url('/background_image.png')" }}
       />
 
-      {/* Everything below stays the same, but wrapped in a higher z-index */}
+      {/* Main content uses higher z-index */}
       <div className="relative z-10">
         {/* Navbar */}
         <header className="sticky top-0 z-30 backdrop-blur bg-neutral-50/80 border-b border-neutral-200">
@@ -183,7 +183,7 @@ export default function App() {
         </footer>
       </div>
 
-      {/* Chat widget lives at the page level */}
+      {/* ✅ Chat widget lives at the page level and floats bottom-left */}
       <ChatWidget />
     </div>
   )

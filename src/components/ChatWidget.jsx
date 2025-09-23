@@ -1,84 +1,80 @@
-import React, { useState } from "react";
+// src/components/ChatWidget.jsx
+import { useState, useRef } from "react";
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const inputRef = useRef(null);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
-
-    const userMessage = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
+  async function send() {
+    const text = input.trim();
+    if (!text) return;
+    setMessages((m) => [...m, { role: "user", content: text }]);
     setInput("");
-
+    setLoading(true);
     try {
-      const res = await fetch("/.netlify/functions/ai-chat", {
+      const resp = await fetch("/.netlify/functions/ai-chat", {
         method: "POST",
-        body: JSON.stringify({ message: input }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
       });
-      const data = await res.json();
-
-      if (data.reply) {
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: data.reply },
-        ]);
-      }
-    } catch (err) {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "⚠️ Error: Unable to reach AI" },
-      ]);
+      const data = await resp.json();
+      setMessages((m) => [...m, { role: "assistant", content: data.reply || "Sorry, no reply." }]);
+    } catch (e) {
+      setMessages((m) => [...m, { role: "assistant", content: "Error reaching AI. Try again." }]);
+    } finally {
+      setLoading(false);
+      inputRef.current?.focus();
     }
-  };
+  }
 
   return (
-    <div className="fixed bottom-4 right-4">
-      {isOpen ? (
-        <div className="w-80 h-96 bg-white border border-gray-300 rounded-xl shadow-lg flex flex-col">
-          <div className="bg-sky-800 text-white p-2 rounded-t-xl flex justify-between items-center">
-            <span className="font-semibold">Elan • Assistant</span>
-            <button onClick={() => setIsOpen(false)}>✖</button>
+    <>
+      {/* Launcher button — bottom-left */}
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="fixed bottom-4 left-4 z-40 rounded-full px-4 py-3 shadow-lg border bg-white/90 backdrop-blur text-slate-800 hover:bg-white"
+        aria-label="Open Elan chat"
+      >
+        💬 Elan
+      </button>
+
+      {/* Chat panel */}
+      {open && (
+        <div className="fixed bottom-20 left-4 z-40 w-80 max-h-[70vh] rounded-2xl shadow-2xl border bg-white overflow-hidden flex flex-col">
+          <div className="px-4 py-3 bg-slate-800 text-white text-sm font-semibold">
+            Elan — Berengard Assistant
           </div>
-          <div className="flex-1 overflow-y-auto p-2 space-y-2 text-sm">
+          <div className="p-3 space-y-3 overflow-y-auto flex-1">
+            {messages.length === 0 && (
+              <div className="text-sm text-slate-500">Hi! Ask me about services, consults, or support.</div>
+            )}
             {messages.map((m, i) => (
-              <div
-                key={i}
-                className={
-                  m.role === "user"
-                    ? "text-right text-slate-700"
-                    : "text-left text-slate-900"
-                }
-              >
-                {m.content}
+              <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
+                <div className={`inline-block rounded-xl px-3 py-2 text-sm ${m.role === "user" ? "bg-slate-200" : "bg-slate-100"}`}>
+                  {m.content}
+                </div>
               </div>
             ))}
+            {loading && <div className="text-xs text-slate-500">Thinking…</div>}
           </div>
-          <div className="p-2 flex gap-2 border-t">
+          <div className="p-3 border-t flex gap-2">
             <input
+              ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              className="flex-1 border rounded px-2 py-1 text-sm"
-              placeholder="Type a message..."
+              onKeyDown={(e) => e.key === "Enter" && send()}
+              placeholder="Type a message…"
+              className="flex-1 rounded-lg border px-3 py-2 text-sm"
             />
-            <button
-              onClick={sendMessage}
-              className="bg-sky-800 text-white px-3 rounded"
-            >
+            <button onClick={send} className="rounded-lg px-3 py-2 text-sm bg-slate-800 text-white hover:bg-slate-700">
               Send
             </button>
           </div>
         </div>
-      ) : (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="bg-sky-800 text-white px-4 py-2 rounded-full shadow-lg"
-        >
-          💬 Chat
-        </button>
       )}
-    </div>
+    </>
   );
 }
