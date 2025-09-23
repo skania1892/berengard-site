@@ -135,7 +135,7 @@ exports.handler = async function (event) {
         statusCode: 200,
         body: JSON.stringify({
           reply:
-            "I’m here to answer questions about our services, pricing, and consults. For other topics, please email hello@berengard.tech.",
+            "I’m here to help with our services, pricing, and booking a consult. Want to know more about our AI audits, chatbots, or automations? You can also reach us at hello@berengard.tech.",
         }),
       };
     }
