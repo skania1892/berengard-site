@@ -77,14 +77,44 @@ export default function App() {
             <h2 className="text-3xl font-bold text-slate-900">Services</h2>
             <p className="mt-2 text-slate-600 max-w-2xl">Pick a starter package below. We’ll tailor each engagement to your workflows, tools, and goals.</p>
 
-            <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ServiceCard title="AI Readiness Audit" price="From $950" points={["Process + tools assessment","Top 5 AI opportunities","90-day roadmap with ROI estimates"]} />
-              <ServiceCard title="Customer Support Chatbot" price="From $1,800" points={["Website/CRM integration","FAQ + order-status flows","Brand tone + analytics"]} />
-              <ServiceCard title="Productivity Automations" price="From $1,500" points={["Email → CRM logging","Quote → invoice workflows","Zapier/Make/Power Automate"]} />
-              <ServiceCard title="Smart Marketing with AI" price="From $1,200" points={["Content + campaigns","Personalized emails","HubSpot/Canva/Copy tools"]} />
-              <ServiceCard title="Forecasting & Analytics" price="From $2,400" points={["Dashboards (Power BI)","Sales/inventory staffing forecasts","Data hygiene + governance"]} />
-              <ServiceCard title="Team Training & Policy" price="From $900" points={["AI 101 for staff","Prompting playbooks","Responsible use policy"]} />
-            </div>
+		<div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+			  <ServiceCard title="AI Readiness Audit" price="From $950" points={[
+				"Process & tools assessment",
+				"Top 5 AI opportunities",
+				"90-day ROI roadmap"
+			  ]} />
+			  <ServiceCard title="Customer Support Chatbot" price="Starter or Premium" points={[
+				"Starter: Zendesk widget + ticketing",
+				"Premium: Custom OpenAI bot",
+				"Train on your content"
+			  ]} />
+			  <ServiceCard title="Productivity Automations" price="From $1,500" points={[
+				"Email → CRM logging",
+				"Quote → Invoice workflows",
+				"Zapier / Make / Power Automate"
+			  ]} />
+			  <ServiceCard title="Smart Marketing with AI" price="From $1,200" points={[
+				"Content & campaigns",
+				"Personalized outreach",
+				"HubSpot / Canva / AI copy"
+			  ]} />
+			  <ServiceCard title="Forecasting & Analytics" price="From $2,400" points={[
+				"Power BI dashboards",
+				"Staffing & inventory forecasting",
+				"Data hygiene checks"
+			  ]} />
+			  <ServiceCard title="Team Training & Policy" price="From $900" points={[
+				"AI 101 workshop",
+				"Prompting playbooks",
+				"Responsible-use policy"
+			  ]} />
+			  <ServiceCard title="AI-Ready Website Starter" price="From $1,200" points={[
+				"React + Tailwind one-pager",
+				"Contact form + email",
+				"Arwen chat + privacy/terms"
+			  ]} />
+		</div>
+
           </div>
         </section>
 

@@ -1,5 +1,10 @@
 [
   {
+    "q": "What services do you offer?",
+    "a": "We currently offer seven main services:\n\n1. **AI Readiness Audit** (from $950) — Process & tools assessment, top 5 AI opportunities, 90-day ROI roadmap.\n2. **Customer Support Chatbot** — Starter (Zendesk widget with branding, FAQs, ticketing) or Premium (custom OpenAI bot trained on your content, optional helpdesk integration).\n3. **Productivity Automations** (from $1,500) — Workflows like Email → CRM logging, Quote → Invoice, Zapier/Make/Power Automate.\n4. **Smart Marketing with AI** (from $1,200) — Content & campaigns, personalized outreach, HubSpot/Canva/AI copy tools.\n5. **Forecasting & Analytics** (from $2,400) — Power BI dashboards, staffing & inventory forecasting, data hygiene checks.\n6. **Team Training & Policy** (from $900) — AI 101 workshop, prompting playbooks, responsible-use policy.\n7. **AI-Ready Website Starter** (from $1,200) — React + Tailwind one-pager, contact form with email, Arwen chat integration, and basic privacy/terms pages."
+  },
+
+  {
     "q": "What does Berengard do?",
     "a": "We deliver practical AI for small and mid-size businesses: audits → implementations (chatbots, automations, analytics) → training. Our goal is to save you time, reduce costs, and improve customer experience."
   },
