@@ -111,7 +111,7 @@ export default function App() {
 			  <ServiceCard title="AI-Ready Website Starter" price="From $1,200" points={[
 				"React + Tailwind one-pager",
 				"Contact form + email",
-				"Arwen chat + privacy/terms"
+				"AI chat + privacy/terms"
 			  ]} />
 		</div>
 
