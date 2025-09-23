@@ -3,13 +3,10 @@
     "q": "What services do you offer?",
     "a": "We currently offer seven main services:\n\n1. **AI Readiness Audit** (from $950) — Process & tools assessment, top 5 AI opportunities, 90-day ROI roadmap.\n2. **Customer Support Chatbot** — Starter (Zendesk widget with branding, FAQs, ticketing) or Premium (custom OpenAI bot trained on your content, optional helpdesk integration).\n3. **Productivity Automations** (from $1,500) — Workflows like Email → CRM logging, Quote → Invoice, Zapier/Make/Power Automate.\n4. **Smart Marketing with AI** (from $1,200) — Content & campaigns, personalized outreach, HubSpot/Canva/AI copy tools.\n5. **Forecasting & Analytics** (from $2,400) — Power BI dashboards, staffing & inventory forecasting, data hygiene checks.\n6. **Team Training & Policy** (from $900) — AI 101 workshop, prompting playbooks, responsible-use policy.\n7. **AI-Ready Website Starter** (from $1,200) — React + Tailwind one-pager, contact form with email, Arwen chat integration, and basic privacy/terms pages."
   },
-
   {
     "q": "What does Berengard do?",
     "a": "We deliver practical AI for small and mid-size businesses: audits → implementations (chatbots, automations, analytics) → training. Our goal is to save you time, reduce costs, and improve customer experience."
   },
-
-  // --- AI Readiness Audit ---
   {
     "q": "What is the AI Readiness Audit?",
     "a": "It’s a comprehensive assessment that looks at your processes and tools, identifies the top 5 AI opportunities, and provides a 90-day ROI roadmap."
@@ -18,8 +15,6 @@
     "q": "How much does the AI Readiness Audit cost?",
     "a": "Our AI Readiness Audit starts from $950."
   },
-
-  // --- Customer Support Chatbot ---
   {
     "q": "What customer support chatbot services do you offer?",
     "a": "We offer two tiers: Starter (Zendesk widget with branding, FAQs, ticketing) and Premium (a custom OpenAI-powered bot, trained on your content, with optional helpdesk integration)."
@@ -28,8 +23,6 @@
     "q": "What is the difference between Starter and Premium chatbots?",
     "a": "Starter uses Zendesk’s out-of-the-box widget for quick deployment. Premium is a custom AI bot (like Arwen here), branded for you, trained on your materials, and can connect to your support system."
   },
-
-  // --- Productivity Automations ---
   {
     "q": "What productivity automations can you build?",
     "a": "We can set up workflows such as Email → CRM logging, Quote → Invoice automation, and system integrations using Zapier, Make, or Power Automate."
@@ -38,8 +31,6 @@
     "q": "How much do productivity automations cost?",
     "a": "Engagements start from $1,500, depending on the number and complexity of workflows."
   },
-
-  // --- Smart Marketing with AI ---
   {
     "q": "What marketing services do you offer?",
     "a": "Our Smart Marketing with AI package (from $1,200) includes content generation, campaign building, and personalized outreach using tools like HubSpot, Canva, and AI copy platforms."
@@ -48,8 +39,6 @@
     "q": "Can you personalize outreach campaigns?",
     "a": "Yes. We use AI to tailor emails, ads, or social content to different audience segments, helping you increase engagement and conversion."
   },
-
-  // --- Forecasting & Analytics ---
   {
     "q": "What types of dashboards can you create?",
     "a": "We build dashboards in Power BI for sales, staffing, and inventory forecasting, as well as data hygiene and operational metrics."
@@ -58,8 +47,6 @@
     "q": "How much does forecasting and analytics cost?",
     "a": "Our Forecasting & Analytics package starts from $2,400."
   },
-
-  // --- Team Training & Policy ---
   {
     "q": "What training do you provide?",
     "a": "We provide AI 101 sessions for staff, prompting playbooks, and help draft responsible-use policies so your team is equipped to use AI effectively."
@@ -68,8 +55,6 @@
     "q": "How much does team training cost?",
     "a": "Training packages start from $900."
   },
-
-  // --- Website Creation (new offering) ---
   {
     "q": "Do you build websites?",
     "a": "Yes. We offer an AI-Ready Website Starter package (from $1,200). It includes a modern React + Tailwind site, a contact form with email notifications, Arwen chat integration, and basic privacy & terms pages."
@@ -78,14 +63,10 @@
     "q": "Can the website be customized?",
     "a": "Yes. We provide a clean starting point that can be tailored to your branding, and we can extend it with additional pages, integrations, or analytics as needed."
   },
-
-  // --- CRM integrations ---
   {
     "q": "What CRM services do you offer?",
     "a": "We can connect AI workflows into popular CRMs like HubSpot, Salesforce, or Zoho. Examples: automating lead capture, syncing customer support tickets, or AI-assisted follow-ups."
   },
-
-  // --- General / Company Info ---
   {
     "q": "Who are you?",
     "a": "We are Berengard Technologies LLC, registered in Tennessee."
