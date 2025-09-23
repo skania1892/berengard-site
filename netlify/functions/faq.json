@@ -1,0 +1,42 @@
+[
+  {
+    "q": "What does Berengard do?",
+    "a": "We deliver practical AI for SMBs: audits → implementations (chatbots, automations, analytics) → training."
+  },
+  {
+    "q": "What services do you offer?",
+    "a": "AI Readiness Audit; Customer Support Chatbot (Starter = Zendesk widget; Premium = custom AI bot); Productivity Automations; Smart Marketing with AI; Forecasting & Analytics; Team Training & Policy."
+  },
+  {
+    "q": "How much does the AI Readiness Audit cost?",
+    "a": "From $950."
+  },
+  {
+    "q": "What’s in the AI Readiness Audit?",
+    "a": "Process and tool assessment, top 5 opportunities, and a 90-day ROI roadmap."
+  },
+  {
+    "q": "Customer Support Chatbot options?",
+    "a": "Starter: Zendesk widget (branding, FAQs, ticketing). Premium: Custom OpenAI bot trained on your content, optional helpdesk integration."
+  },
+  {
+    "q": "Pricing ranges for other services?",
+    "a": "Productivity Automations from $1,500; Smart Marketing with AI from $1,200; Forecasting & Analytics from $2,400; Team Training & Policy from $900."
+  },
+  {
+    "q": "Tech stack you work with?",
+    "a": "ChatGPT/Claude/Copilot; Zendesk/Intercom/Tidio; Zapier/Make/Power Automate; Power BI/BigQuery/Vertex AI."
+  },
+  {
+    "q": "Company details?",
+    "a": "Berengard Technologies LLC, registered in Tennessee."
+  },
+  {
+    "q": "How do I contact you or book a consult?",
+    "a": "Use the site contact form or email hello@berengard.tech. A Calendly link may be added later."
+  },
+  {
+    "q": "Do you have a baseline support widget?",
+    "a": "Yes, we use Zendesk Support Team for ticketing; Arwen is our custom AI assistant."
+  }
+]
