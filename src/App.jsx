@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './assets/logo_transparent.png';
+import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
   return (
@@ -237,5 +238,11 @@ export function RingLogo({ className = "" }) {
         <path d="M -28 0 a 28 18 0 1 1 56 0 a 28 18 0 1 1 -56 0" fill="none" stroke="#0c4a6e" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     </svg>
+	<>
+		{/* ...existing site content... */}
+		<ChatWidget />
+	</>
+
   )
 }
+
