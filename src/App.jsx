@@ -37,45 +37,51 @@ export default function App() {
       </header>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32">
-        <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-medium uppercase tracking-wider">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
-              </span>
-              Accepting new clients
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-              AI made <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-200 to-indigo-300">simple</span> & practical.
-            </h1>
-            
-            <p className="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed">
-              We cut through the hype to help small businesses choose the right tools, implement them quickly, and train teams for real growth.
-            </p>
-            
-            <div className="flex flex-wrap gap-4" id="book">
-              <a href="#contact" className="px-8 py-4 rounded-2xl bg-gradient-to-b from-sky-500 to-sky-700 text-white hover:brightness-110 shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-all font-medium">
-                Book free consult
-              </a>
-              <a href="#services" className="px-8 py-4 rounded-2xl glass-panel hover:bg-white/10 transition-all font-medium text-white">
-                Explore services
-              </a>
-            </div>
-          </div>
+      {/* --- HERO SECTION --- */}
+		<section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32">
+		  <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+			
+			{/* Left Column: Text */}
+			<div className="space-y-8">
+			  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-medium uppercase tracking-wider">
+				<span className="relative flex h-2 w-2">
+				  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+				  <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+				</span>
+				Accepting new clients
+			  </div>
+			  
+			  <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+				AI made <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-200 to-indigo-300">simple</span> & practical.
+			  </h1>
+			  
+			  <p className="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed">
+				We cut through the hype to help small businesses choose the right tools, implement them quickly, and train teams for real growth.
+			  </p>
+			  
+			  <div className="flex flex-wrap gap-4" id="book">
+				<a href="#contact" className="px-8 py-4 rounded-2xl bg-gradient-to-b from-sky-500 to-sky-700 text-white hover:brightness-110 shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-all font-medium">
+				  Book free consult
+				</a>
+				<a href="#services" className="px-8 py-4 rounded-2xl glass-panel hover:bg-white/10 transition-all font-medium text-white">
+				  Explore services
+				</a>
+			  </div>
+			</div>
 
-          <div className="relative hidden md:block">
-             {/* Abstract representation of Logo in Glass */}
-             <div className="relative w-full aspect-square max-w-md mx-auto glass-panel rounded-3xl flex items-center justify-center p-12 hover:scale-[1.02] transition-transform duration-700">
-                <img src={Logo} alt="Berengard Logo" className="w-full h-full object-contain drop-shadow-2xl opacity-90" />
-                {/* Reflection glint */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
-             </div>
-          </div>
-        </div>
-      </section>
+			{/* Right Column: Floating Glow Logo */}
+			<div className="relative hidden md:block">
+			   <div className="relative w-full aspect-square max-w-md mx-auto flex items-center justify-center hover:scale-[1.02] transition-transform duration-700">
+				  {/* Main Logo with strong 'liquid' glow */}
+				  <img 
+					src={Logo} 
+					alt="Berengard Logo" 
+					className="w-full h-full object-contain drop-shadow-[0_0_60px_rgba(255,255,255,0.25)] opacity-95" 
+				  />
+			   </div>
+			</div>
+		  </div>
+		</section>
 
       {/* --- SOCIAL PROOF --- */}
       <section className="mx-auto max-w-6xl px-4 py-10">
