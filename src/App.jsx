@@ -68,7 +68,7 @@ export default function App() {
 
           <div className="relative hidden md:block">
              {/* Abstract representation of Logo in Glass */}
-             <div className="relative w-full aspect-square max-w-md mx-auto glass-panel rounded-3xl flex items-center justify-center p-12 rotate-3 hover:rotate-0 transition-transform duration-700">
+             <div className="relative w-full aspect-square max-w-md mx-auto glass-panel rounded-3xl flex items-center justify-center p-12 hover:scale-[1.02] transition-transform duration-700">
                 <img src={Logo} alt="Berengard Logo" className="w-full h-full object-contain drop-shadow-2xl opacity-90" />
                 {/* Reflection glint */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
