@@ -1,7 +1,7 @@
 /* --- START OF FILE App.jsx --- */
 
 import React from 'react'
-import Logo from './assets/logo_transparent.png';
+import Logo from './assets/logo_transparent.webp';
 import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
@@ -36,7 +36,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* --- HERO SECTION --- */}
       {/* --- HERO SECTION --- */}
 		<section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32">
 		  <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
