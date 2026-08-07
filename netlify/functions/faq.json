@@ -1,7 +1,7 @@
 [
   {
     "q": "What services do you offer?",
-    "a": "We currently offer seven main services:\n\n1. **AI Readiness Audit** (from $950) — Process & tools assessment, top 5 AI opportunities, 90-day ROI roadmap.\n2. **Customer Support Chatbot** — Starter (Zendesk widget with branding, FAQs, ticketing) or Premium (custom OpenAI bot trained on your content, optional helpdesk integration).\n3. **Productivity Automations** (from $1,500) — Workflows like Email → CRM logging, Quote → Invoice, Zapier/Make/Power Automate.\n4. **Smart Marketing with AI** (from $1,200) — Content & campaigns, personalized outreach, HubSpot/Canva/AI copy tools.\n5. **Forecasting & Analytics** (from $2,400) — Power BI dashboards, staffing & inventory forecasting, data hygiene checks.\n6. **Team Training & Policy** (from $900) — AI 101 workshop, prompting playbooks, responsible-use policy.\n7. **AI-Ready Website Starter** (from $1,200) — React + Tailwind one-pager, contact form with email, Arwen chat integration, and basic privacy/terms pages."
+    "a": "We currently offer seven main services:\n\n1. **AI Readiness Audit** (from $950) — Process & tools assessment, top 5 AI opportunities, 90-day ROI roadmap.\n2. **AI Support Chatbot** — your own branded assistant, in two tiers: Starter (trained on your FAQs) or Premium (trained on your full document set, with helpdesk or CRM integration and ongoing tuning). Priced per client after a short scoping conversation.\n3. **Productivity Automations** (from $1,500) — Workflows like Email → CRM logging, Quote → Invoice, Zapier/Make/Power Automate.\n4. **Smart Marketing with AI** (from $1,200) — Content & campaigns, personalized outreach, HubSpot/Canva/AI copy tools.\n5. **Forecasting & Analytics** (from $2,400) — Power BI dashboards, staffing & inventory forecasting, data hygiene checks.\n6. **Team Training & Policy** (from $900) — AI 101 workshop, prompting playbooks, responsible-use policy.\n7. **AI-Ready Website Starter** (from $1,200) — React + Tailwind one-pager, contact form with email, Arwen chat integration, and basic privacy/terms pages."
   },
   {
     "q": "What does Berengard do?",
@@ -17,11 +17,15 @@
   },
   {
     "q": "What customer support chatbot services do you offer?",
-    "a": "We offer two tiers: Starter (Zendesk widget with branding, FAQs, ticketing) and Premium (a custom OpenAI-powered bot, trained on your content, with optional helpdesk integration)."
+    "a": "We build your own branded AI assistant — the same kind of thing I am. Two tiers:\n\n- **Starter** — trained on your FAQs and key pages, branded for you, with a handoff to your contact form or inbox.\n- **Premium** — trained on your full document set, integrated with your helpdesk or CRM, with ongoing tuning as your content changes.\n\nPricing depends on how much content there is and what it connects to, so we quote it after a short scoping conversation. Prefer an off-the-shelf platform like Zendesk or Intercom instead? We can set that up for you too — just ask."
   },
   {
     "q": "What is the difference between Starter and Premium chatbots?",
-    "a": "Starter uses Zendesk’s out-of-the-box widget for quick deployment. Premium is a custom AI bot (like Arwen here), branded for you, trained on your materials, and can connect to your support system."
+    "a": "Both are your own branded assistant, not a third-party widget. **Starter** is trained on your FAQs and key pages and hands off to your contact form or inbox. **Premium** is trained on your full document set, connects to your helpdesk or CRM so it can log or escalate conversations, and includes ongoing tuning as your content changes."
+  },
+  {
+    "q": "Can you set up Zendesk or Intercom instead?",
+    "a": "Yes. We build our own assistant by default because it's cheaper to run, fully branded, and trained on exactly your content — but if you'd rather use an established platform like Zendesk or Intercom, we're happy to set it up, brand it, load your FAQs, and configure ticketing. Tell us which you prefer and we'll quote it."
   },
   {
     "q": "What productivity automations can you build?",
@@ -74,6 +78,42 @@
   {
     "q": "How do I contact you?",
     "a": "You can email hello@berengard.tech or use the contact form on our site. A Calendly link for direct consult booking will be added soon."
+  },
+  {
+    "q": "Do you have a privacy policy?",
+    "a": "Yes — you can read it at **/privacy.html**. In short: we collect only what we need to reply to you (contact form details and chat messages) plus standard technical data like IP addresses. We don't sell personal information, we don't run advertising trackers, and we don't store chat transcripts. To access or delete your information, email hello@berengard.tech."
+  },
+  {
+    "q": "What happens to what I type in this chat?",
+    "a": "Your message is sent to our AI provider to generate a reply, then shown to you. **We don't save the conversation** — it lives only in your browser for this visit and is gone when you close the page. Please don't share passwords, financial or health details, or anyone else's personal information here. Full details are in our Privacy Policy at /privacy.html."
+  },
+  {
+    "q": "What are your terms of use?",
+    "a": "They're at **/terms.html**. They cover use of the website and this assistant. Two things worth knowing: my answers are AI-generated and can be wrong, so please confirm anything important with a person; and prices on the site are indicative starting points, not binding quotes. Paid work is governed by a separate written services agreement."
+  },
+  {
+    "q": "Do you sell my data?",
+    "a": "No. We don't sell or rent personal information, and we don't share it for advertising. In fact this site sets **no cookies at all** and loads no third-party trackers. We only share information with the service providers who run our site, email, and AI assistant — each listed by name in our Privacy Policy at /privacy.html."
+  },
+  {
+    "q": "How do I get my data deleted or unsubscribe?",
+    "a": "Email hello@berengard.tech and tell us what you'd like — access, correction, deletion, or to stop receiving email. We respond within 45 days and honor opt-out requests promptly, usually within one business day. There's no penalty for asking."
+  },
+  {
+    "q": "How did you get my email address?",
+    "a": "If we contacted you first, we found your business contact details from public sources such as your company website or a public business listing. We don't buy contact lists. To stop hearing from us, just reply with \"unsubscribe\" or email hello@berengard.tech — we'll take care of it right away. See /privacy.html for details."
+  },
+  {
+    "q": "Why is the chatbot called Arwen?",
+    "a": "Good catch — it's a nod to Tolkien. Arwen suits an assistant that's meant to be helpful and a little quietly capable, and \"Berengard\" has that same Middle-earth ring to it. It's an affectionate homage rather than anything official. Now, what can I help you with?"
+  },
+  {
+    "q": "Are you a Lord of the Rings fan?",
+    "a": "The names rather give it away, don't they? Happy to enjoy the reference for a moment — though I'm on firmer ground with AI audits, chatbots, and automations than with Elvish. What brings you by?"
+  },
+  {
+    "q": "What does Berengard mean?",
+    "a": "It's our own coinage rather than a word from the books — chosen because it sounds like it belongs in that world. Same spirit as naming the assistant Arwen. If you want the real story, Steven's happy to tell it on a consult call: hello@berengard.tech."
   },
   {
     "q": "One ring to find them all?",

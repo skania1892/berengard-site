@@ -15,7 +15,7 @@ export default function App() {
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl opacity-50 mix-blend-screen animate-blob animation-delay-2000 filter" />
         <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl opacity-50 mix-blend-screen animate-blob animation-delay-4000 filter" />
         {/* Subtle noise texture overlay to give it that premium 'film' grain */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
       </div>
 
       {/* --- NAVBAR --- */}
@@ -112,9 +112,9 @@ export default function App() {
               "Top 5 AI opportunities",
               "90-day ROI roadmap"
             ]} />
-            <ServiceCard title="Support Chatbot" price="Starter / Premium" points={[
-              "Zendesk or Custom OpenAI",
-              "Train on your documents",
+            <ServiceCard title="AI Support Chatbot" price="Starter / Premium" points={[
+              "Your own branded assistant",
+              "Trained on your content",
               "24/7 automated triage"
             ]} />
             <ServiceCard title="Productivity Automations" price="From $1,500" points={[
@@ -175,7 +175,7 @@ export default function App() {
               
               {/* Info Side */}
               <div className="bg-gradient-to-br from-sky-900 to-slate-900 p-10 md:col-span-2 flex flex-col justify-between text-white relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.svg')] opacity-10"></div>
                 <div className="relative z-10">
                   <h2 className="text-2xl font-bold mb-2">Let's Talk</h2>
                   <p className="text-sky-200 text-sm mb-8">Tell us your bottleneck. We'll propose a fix.</p>
@@ -229,6 +229,14 @@ export default function App() {
                   <button type="submit" className="w-full py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-sky-50 transition-colors shadow-lg shadow-sky-900/20">
                     Send Message
                   </button>
+
+                  <p className="text-[11px] leading-relaxed text-slate-500 text-center">
+                    By sending this message you agree to our{" "}
+                    <a href="/privacy.html" className="text-slate-400 underline underline-offset-2 hover:text-sky-400 transition-colors">Privacy Policy</a>
+                    {" "}and{" "}
+                    <a href="/terms.html" className="text-slate-400 underline underline-offset-2 hover:text-sky-400 transition-colors">Terms of Use</a>.
+                    We&rsquo;ll only use your details to reply.
+                  </p>
                 </form>
               </div>
             </div>
@@ -238,6 +246,15 @@ export default function App() {
 
       <footer className="py-8 text-center text-xs text-slate-600 border-t border-white/5">
         <p>© {new Date().getFullYear()} Berengard Technologies LLC · Built with React & AI</p>
+        <p className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          {/* Static pages in public/ — plain <a>, not client-side routes */}
+          <a href="/privacy.html" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <span className="opacity-40">·</span>
+          <a href="/terms.html" className="hover:text-slate-400 transition-colors">Terms of Use</a>
+          <span className="opacity-40">·</span>
+          <a href="mailto:hello@berengard.tech" className="hover:text-slate-400 transition-colors">hello@berengard.tech</a>
+        </p>
+        <p className="mt-2 text-slate-700">PO Box 223, Whites Creek, TN 37189-0223</p>
       </footer>
 
       <ChatWidget />

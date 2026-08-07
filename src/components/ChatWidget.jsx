@@ -71,8 +71,16 @@ export default function ChatWidget() {
 
           <div className="p-3 space-y-3 overflow-y-auto flex-1 bg-white/90">
             {messages.length === 0 && (
-              <div className="text-sm text-slate-500">
-                Hi! Ask me about services, consults, or support.
+              <div className="space-y-2">
+                <div className="text-sm text-slate-500">
+                  Hi! Ask me about services, consults, or support.
+                </div>
+                <div className="text-[11px] leading-relaxed text-slate-400">
+                  I&rsquo;m an AI assistant, so I can get things wrong — please
+                  confirm anything important. Messages are sent to our AI
+                  provider to generate a reply and aren&rsquo;t stored. Don&rsquo;t
+                  share sensitive or confidential information.
+                </div>
               </div>
             )}
 				{messages.map((m, i) => (
@@ -104,22 +112,36 @@ export default function ChatWidget() {
             {loading && <div className="text-xs text-slate-500">Thinking…</div>}
           </div>
 
-          <div className="p-3 border-t flex gap-2 bg-white">
-            <input
-              ref={inputRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && send()}
-              placeholder="Type a message…"
-              className="flex-1 rounded-lg border px-3 py-2 text-sm"
-            />
-            <button
-              onClick={send}
-              className="rounded-lg px-3 py-2 text-sm text-white hover:opacity-95"
-              style={{ backgroundColor: BRAND_NAVY }}
-            >
-              Send
-            </button>
+          <div className="p-3 border-t bg-white">
+            <div className="flex gap-2">
+              <input
+                ref={inputRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && send()}
+                placeholder="Type a message…"
+                className="flex-1 rounded-lg border px-3 py-2 text-sm"
+              />
+              <button
+                onClick={send}
+                className="rounded-lg px-3 py-2 text-sm text-white hover:opacity-95"
+                style={{ backgroundColor: BRAND_NAVY }}
+              >
+                Send
+              </button>
+            </div>
+            {/* Always-visible AI disclosure — required context even mid-conversation */}
+            <p className="mt-2 text-[10px] leading-snug text-slate-400 text-center">
+              AI-generated · may be inaccurate ·{" "}
+              <a
+                href="/privacy.html#ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-slate-600"
+              >
+                how we handle your messages
+              </a>
+            </p>
           </div>
         </div>
       )}

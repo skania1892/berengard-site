@@ -1,0 +1,245 @@
+/* Shared styling for Berengard legal pages (privacy.html, terms.html).
+   Self-contained on purpose: these live in public/ and are served as static
+   files, so they are NOT processed by Vite/Tailwind. Colours mirror the
+   Tailwind values used in src/index.css and App.jsx:
+     slate-950 #020617 · slate-400 #94a3b8 · slate-300 #cbd5e1
+     sky-300  #7dd3fc  · sky-400   #38bdf8 · sky-500   #0ea5e9 */
+
+:root {
+  --bg: #020617;
+  --text: #cbd5e1;
+  --muted: #94a3b8;
+  --dim: #64748b;
+  --white: #ffffff;
+  --sky: #38bdf8;
+  --sky-soft: #7dd3fc;
+  --line: rgba(255, 255, 255, 0.1);
+  --panel: rgba(255, 255, 255, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* --- Ambient background, matching the mesh gradients on the main site --- */
+.ambient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+}
+.blob {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+}
+.blob-1 { top: 0; left: 25%; background: rgba(2, 132, 199, 0.2); }
+.blob-2 { top: 0; right: 25%; background: rgba(79, 70, 229, 0.2); }
+.blob-3 { bottom: -8rem; left: 33%; background: rgba(59, 130, 246, 0.2); }
+
+/* --- Header --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.topbar-inner {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.wordmark {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  /* Cancel the accent underline the generic `a` rule below applies to body links */
+  border-bottom: none;
+}
+.topbar nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s;
+}
+.topbar nav a:hover { color: var(--white); }
+.topbar nav a[aria-current="page"] { color: var(--sky); }
+
+/* --- Layout --- */
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+.dates {
+  color: var(--dim);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 2.5rem;
+}
+.lede {
+  font-size: 1.0625rem;
+  color: var(--text);
+  margin: 0 0 2.5rem;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+h2:first-of-type { border-top: none; padding-top: 0; }
+h3 {
+  color: var(--sky-soft);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.6rem;
+}
+
+p { margin: 0 0 1.1rem; }
+ul, ol { margin: 0 0 1.1rem; padding-left: 1.35rem; }
+li { margin-bottom: 0.55rem; }
+li::marker { color: var(--sky); }
+strong { color: var(--white); font-weight: 600; }
+
+a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56, 189, 248, 0.3); }
+a:hover { color: var(--sky-soft); border-bottom-color: var(--sky-soft); }
+
+/* --- Table of contents --- */
+.toc {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 3rem;
+}
+.toc h2 {
+  border: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sky);
+}
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 2rem;
+  font-size: 0.9rem;
+}
+.toc li { margin-bottom: 0.4rem; break-inside: avoid; }
+.toc a { border-bottom: none; color: var(--text); }
+.toc a:hover { color: var(--sky); }
+
+/* --- Callout --- */
+.callout {
+  background: rgba(14, 165, 233, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-left: 3px solid var(--sky);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.4rem;
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* --- Tables --- */
+.table-wrap { overflow-x: auto; margin: 0 0 1.75rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 34rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.03);
+}
+td { color: var(--muted); }
+td strong { color: var(--text); }
+
+/* --- Contact block --- */
+.contact-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  margin-top: 1rem;
+}
+.contact-card p { margin-bottom: 0.4rem; }
+
+/* --- Footer --- */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+footer a { color: var(--dim); border-bottom: none; }
+footer a:hover { color: var(--muted); }
+footer .sep { margin: 0 0.5rem; opacity: 0.5; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem; }
+  main { padding: 2.5rem 1.25rem 3.5rem; }
+  .toc ol { columns: 1; }
+  .topbar nav { gap: 1rem; }
+}
