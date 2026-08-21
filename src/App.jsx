@@ -244,17 +244,22 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="py-8 text-center text-xs text-slate-600 border-t border-white/5">
+      {/* slate-400, not slate-600: on bg-slate-950 the old value was 2.66:1 and
+          the address line 1.95:1 — both well under the 4.5:1 WCAG AA floor. The
+          privacy/terms links and the CAN-SPAM postal address have to be legibly
+          available, not just technically present. slate-400 is 7.87:1 and still
+          reads as subdued against a near-black background. */}
+      <footer className="py-8 text-center text-xs text-slate-400 border-t border-white/5">
         <p>© {new Date().getFullYear()} Berengard Technologies LLC · Built with React & AI</p>
         <p className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
           {/* Static pages in public/ — plain <a>, not client-side routes */}
-          <a href="/privacy.html" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="/privacy.html" className="underline underline-offset-2 hover:text-white transition-colors">Privacy Policy</a>
           <span className="opacity-40">·</span>
-          <a href="/terms.html" className="hover:text-slate-400 transition-colors">Terms of Use</a>
+          <a href="/terms.html" className="underline underline-offset-2 hover:text-white transition-colors">Terms of Use</a>
           <span className="opacity-40">·</span>
-          <a href="mailto:hello@berengard.tech" className="hover:text-slate-400 transition-colors">hello@berengard.tech</a>
+          <a href="mailto:hello@berengard.tech" className="underline underline-offset-2 hover:text-white transition-colors">hello@berengard.tech</a>
         </p>
-        <p className="mt-2 text-slate-700">PO Box 223, Whites Creek, TN 37189-0223</p>
+        <p className="mt-2">PO Box 223, Whites Creek, TN 37189-0223</p>
       </footer>
 
       <ChatWidget />

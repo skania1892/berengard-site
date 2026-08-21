@@ -85,8 +85,13 @@ export default function ChatWidget() {
             )}
 				{messages.map((m, i) => (
 				  <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
+					{/* text-slate-800 is REQUIRED, not decorative. App.jsx's root sets
+					    text-slate-200 for the dark page, and this panel is inside it —
+					    so without an explicit colour the bubbles inherit near-white text
+					    on a near-white bubble (user bubble was 1.00:1, literally
+					    invisible). Any new element in this widget needs its own colour. */}
 					<div
-					  className={`inline-block rounded-xl px-3 py-2 text-sm ${
+					  className={`inline-block rounded-xl px-3 py-2 text-sm text-slate-800 ${
 						m.role === "user" ? "bg-slate-200" : "bg-slate-100"
 					  }`}
 					  style={{ maxWidth: "100%" }}
@@ -120,7 +125,7 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && send()}
                 placeholder="Type a message…"
-                className="flex-1 rounded-lg border px-3 py-2 text-sm"
+                className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm bg-white text-slate-900 placeholder:text-slate-500"
               />
               <button
                 onClick={send}
