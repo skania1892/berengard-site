@@ -17,7 +17,7 @@ try {
 } catch (e) {
   console.error("Failed to load faq.json:", e);
   FAQ = [
-    { q: "What services do you offer?", a: "AI Readiness Audit; Customer Support Chatbot; Productivity Automations; Smart Marketing with AI; Forecasting & Analytics; Team Training & Policy; AI-Ready Website Starter." }
+    { q: "What services do you offer?", a: "AI Readiness Audit; AI Support Chatbot; Productivity Automations; Smart Marketing with AI; Forecasting & Analytics; Team Training & Policy; AI-Ready Website Starter." }
   ];
 }
 
@@ -254,7 +254,7 @@ function rateLimited(ip) {
 
 // --- Canned replies ---
 const FALLBACK_REPLY =
-  "I couldn’t generate a response just now. Here’s a quick overview of our services: AI Readiness Audit, Customer Support Chatbot, Productivity Automations, Smart Marketing with AI, Forecasting & Analytics, Team Training & Policy, and AI-Ready Website Starter. You can also reach us at hello@berengard.tech.";
+  "I couldn’t generate a response just now. Here’s a quick overview of our services: AI Readiness Audit, AI Support Chatbot, Productivity Automations, Smart Marketing with AI, Forecasting & Analytics, Team Training & Policy, and AI-Ready Website Starter. You can also reach us at hello@berengard.tech.";
 const DECLINED_REPLY =
   "I can’t help with that. Please keep questions focused on our services and consults.";
 const OFF_TOPIC_REPLY =
